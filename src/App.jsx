@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import HomePage from './components/homePage';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar';
 
 const App = () => {
 
   return (
     <div>
-        <div className='p-4'>
+        <div className="">
           <Navbar />
           <HomePage />
         </div>
