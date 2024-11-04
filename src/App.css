@@ -1,3 +1,101 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body {
+    scroll-behavior: smooth; /* Menambahkan efek smooth scrolling */
+  }
+  
+  h-screen {
+    height: 100vh; /* Tinggi penuh untuk setiap section */
+  }
+
+  /* coba project */
+
+
+.transition-opacity {
+  transition: opacity 0.2s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animation classes */
+.slide-in-left {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 1s ease-out forwards;
+}
+
+.slide-in-top {
+  animation: slideInFromTop 1s ease-out forwards;
+}
+
+.slide-in-bottom {
+  animation: slideInFromBottom 1s ease-out forwards;
+}
+
+/*parallax effect*/
+.parallaxEffect {
+  transform: scale(1.05);
+  opacity: 1;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.contentA,
+.contentB {
+  transition: opacity 1s ease-out;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.block {
+  opacity: 1;
+}
+
+
