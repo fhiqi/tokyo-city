@@ -24,7 +24,7 @@ const HomePageDark = () => {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundRepeat: "repeat",
-        minHeight: "100vh",
+        minHeight: "300vh",
       }}
     >
       {/* text nature nya */}
@@ -114,7 +114,10 @@ const HomePageDark = () => {
           </div>
         </div>
 
-        <div className="bg-black">
+        <div
+          className="bg-black text-[#9747ff] text-[180px] font-semibold font-['Figtree']"
+          Culture
+        >
           <div className="flex justify-center absolute left-1/2 top-[80%] -translate-x-1/2 -translate-y-52 ">
             <div
               className=" font-figtree font-bold"
