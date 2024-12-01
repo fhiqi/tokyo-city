@@ -233,7 +233,7 @@ const HomePageDark = () => {
                   </ul>
                   <button
                     onClick={handleModalClose}
-                    className="absolute justify-center w-16 h-16 text-white p-2 right-64 top-52"
+                    className="absolute justify-center w-16 h-16 text-white p-2 right-44 top-44"
                   >
                     <img src={IconClose} alt="close" />
                   </button>
