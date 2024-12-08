@@ -1,57 +1,76 @@
-import React, { useState } from 'react';
-
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
-
     return (
-        <div>
-            {/* Navbar untuk layar besar */}
-            <div className="hidden md:block fixed left-1/2 transform -translate-x-1/2 pt-4">
-                <div className="w-[700px] lg:w-full h-[61px] px-3 py-2 bg-white rounded-xl shadow justify-center items-center gap-[50px] lg:gap-[120px] inline-flex">
-                    <div className="justify-start items-center gap-3 flex ml-2">
-                        <div className="text-black text-xl font-bold font-['Figtree']">Tokyo</div>
-                    </div>
-                    <ul className="justify-start items-center gap-8 flex cursor-pointer">
-                        <div className="text-[#848484] text-lg font-semibold font-['Figtree'] hover:text-black transition ease-in-out duration-700">Technology</div>
-                        <div className="text-[#848484] text-lg font-semibold font-['Figtree'] hover:text-black transition ease-in-out duration-700">Tourism</div>
-                        <div className="text-[#848484] text-lg font-semibold font-['Figtree'] hover:text-black transition ease-in-out duration-700">Nature</div>
-                        <div className="text-[#848484] text-lg font-semibold font-['Figtree'] hover:text-black transition ease-in-out duration-700">Culture</div>
-                    </ul>
-                    <div className="w-[150px] h-[45px] bg-[#f67b08] rounded-[10px] justify-center items-center gap-2 flex">
-                        <div className="text-white text-lg font-semibold font-['Figtree']">Discover more</div>
-                    </div>
-                </div>
+      <div className="fixed mt-4 left-1/2 transform -translate-x-1/2 pt-1 drop-shadow-xl font-figtree w-full lg:w-[60%] px-4 sm:px-6">
+        <div
+          className="h-[61px] w-full px-3 py-2 bg-white/60 bg-opacity-30 rounded-xl shadow justify-center items-center gap-4 sm:gap-6 font-['Figtree'] inline-flex"
+          style={{
+            backdropFilter: "blur(40px)",
+            WebkitBackdropFilter: "blur(40px)",
+          }}
+        >
+          <nav className="flex items-center justify-between w-full gap-4 sm:gap-6">
+            <ul className="flex gap-3 sm:gap-4">
+              <li className="text-lg relative group transition duration-300">
+                <a
+                  href="#Tokyo"
+                  className="text-black font-semibold font-figtree hover:text-orange-500"
+                >
+                  Tokyo
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
+                </a>
+              </li>
+            </ul>
+            <ul className="flex gap-8 font-figtree sm:gap-4">
+              <li className="text-lg relative group transition duration-300">
+                <a
+                  href="#Pagetwo"
+                  className="text-black font-semibold hover:text-orange-500"
+                >
+                  Technology
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
+                </a>
+              </li>
+              <li className="text-lg relative group transition duration-300">
+                <a
+                  href="#Tourism"
+                  className="text-black font-semibold hover:text-orange-500"
+                >
+                  Tourism
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
+                </a>
+              </li>
+              <li className="text-lg relative group transition duration-300">
+                <a
+                  href="#Culture"
+                  className="text-black font-semibold hover:text-orange-500"
+                >
+                  Culture
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              </li>
+              <li className="text-lg relative group transition duration-300">
+                <a
+                  href="#Nature"
+                  className="text-black font-semibold hover:text-orange-500"
+                >
+                  Nature
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
+                </a>
+              </li>
+            </ul>
+            <div className="cursor-pointer w-[150px] h-[45px] bg-[#f67b08] rounded-[10px] flex justify-center items-center font-figtree">
+                <span className="text-white text-lg font-semibold hidden sm:block">
+                    Discover more
+                </span>
+                <span className="text-white text-lg font-semibold sm:hidden">
+                    More..
+                </span>
             </div>
-
-            {/* Navbar untuk layar kecil */}
-            <div className="md:hidden absolute flex justify-between p-4 px-6 w-full bg-[#4D4D4D66] backdrop-blur-md z-20">
-                <div className="text-white text-2xl font-semibold">Tokyo</div>
-                <button onClick={toggleMenu} className="text-white text-4xl ">
-                    ☰ {/* Ikon Hamburger */}
-                </button>
-
-                {/* Menu berbasis daftar */}
-                {isMenuOpen && (
-                    <div className="absolute left-0 mt-14 w-full bg-white backdrop-blur-md shadow-lg ">
-                        {/* <div className="text-black text-lg font-semibold font-['Figtree'] mb-4">Tokyo</div> */}
-                        <ul className="p-4 cursor-pointer">
-                            <li className="py-2 px-3 text-[#848484] text-lg font-semibold font-['Figtree'] hover:bg-gray-100">Technology</li>
-                            <li className="py-2 px-3 text-[#848484] text-lg font-semibold font-['Figtree'] hover:bg-gray-100">Tourism</li>
-                            <li className="py-2 px-3 text-[#848484] text-lg font-semibold font-['Figtree'] hover:bg-gray-100">Nature</li>
-                            <li className="py-2 px-3 text-[#848484] text-lg font-semibold font-['Figtree'] hover:bg-gray-100">Culture</li>
-                        </ul>
-                        {/* <button className="mt-4 w-full h-[45px] bg-[#f67b08] rounded-[10px] text-white text-lg font-semibold font-['Figtree']">
-                            Discover more
-                        </button> */}
-                    </div>
-                )}
-            </div>
+          </nav>
         </div>
+      </div>
     );
-};
-
+  };
+  
 export default Navbar;
+  
